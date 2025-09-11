@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(MyProject)
+include_directories(include)
+set(SOURCES ./main.cpp)
+add_executable(main ${SOURCES})
