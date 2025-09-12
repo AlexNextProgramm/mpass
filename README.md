@@ -1,5 +1,8 @@
 # Mpass
 
+This is an open source program. For Linux systems.
+The program stores passwords on the machine in encrypted form. Ability to add delete passwords. In order to view all passwords in the future, it is planned to connect it to a remote service where they can be stored.
+
 Download
 
 `wget https://raw.githubusercontent.com/AlexNextProgramm/mpass/refs/heads/main/data/mpass_v1.deb`
@@ -27,6 +30,5 @@ start programm `mpass`
 or
 
 `get my@gmail.com`
-
 
 result *Ваш пароль: password111*
