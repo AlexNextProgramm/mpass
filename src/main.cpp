@@ -19,6 +19,7 @@ int main() {
         if (line.empty()) continue;
         std::istringstream iss(line);
         std::vector<std::string> args;
+        std::string retrieved;
         std::string word;
 
         while (iss >> word) {
@@ -45,7 +46,6 @@ int main() {
                 std::cout << "Требуется название  get [name] \n";
             }
 
-            std::string retrieved;
             if (mp.getPassword(ar2, key, retrieved))
             {
                 std::cout << "Пароль: " << retrieved << "\n";
@@ -78,6 +78,10 @@ int main() {
 
         if(ar == "exit" || ar == "end"){
             return 0;
+        }
+
+        if (mp.getPassword(ar, key, retrieved)){
+             std::cout << "Пароль: " << retrieved << "\n";
         }
     }
 
