@@ -7,12 +7,16 @@
 
 class MPass {
 public:
-    const std::string filename;
+    std::string filename = "pass";
     MPass(const std::string &filename) : filename(filename)
     {
         load();
     }
-    ~MPass() {
+    MPass(){
+        
+    }
+    ~MPass()
+    {
         save();
     }
     // Добавить пароль для сервиса (шифруется ключом)
@@ -26,13 +30,17 @@ public:
     void list();
 
     void save();
+    void load();
+    void setFile(const std::string &filename){
+        this->filename = filename;
+    }
+
 private:
     // XOR шифрование/расшифровка
     std::string crypt(const std::string& text, const std::string& key) const;
 
     // Хранилище зашифрованных паролей: сервис -> зашифрованный пароль
     std::unordered_map<std::string, std::string> passwordStorage;
-    void load();
 };
 
 #include "MPass.cpp"
